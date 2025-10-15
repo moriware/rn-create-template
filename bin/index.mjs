@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const inquirerModule = require('inquirer');
-const chalkModule = require('chalk');
-const inquirer = inquirerModule.default || inquirerModule;
-const chalk = chalkModule.default || chalkModule;
+import fs from 'node:fs';
+import path from 'node:path';
+import inquirer from 'inquirer';
+import chalk from 'chalk';
 
 const sleep = (ms = 450) =>
   new Promise((resolve) => {
