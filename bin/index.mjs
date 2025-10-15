@@ -2,8 +2,11 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const sleep = (ms = 450) =>
   new Promise((resolve) => {
