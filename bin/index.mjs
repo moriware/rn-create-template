@@ -2,11 +2,8 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const sleep = (ms = 450) =>
   new Promise((resolve) => {
@@ -299,7 +296,7 @@ const GENERATORS = {
     label: chalk.cyan('🎨 Component'),
     color: chalk.cyanBright,
     resolveBasePath: (name) =>
-      path.join(__dirname, '../src', 'components', name),
+      path.join(process.cwd(), 'src', 'components', name),
     buildFiles: buildComponentFiles,
     indexType: 'component',
     successMessage: (name) =>
@@ -312,7 +309,7 @@ const GENERATORS = {
   screen: new ArtifactGenerator({
     label: chalk.magenta('📱 Screen'),
     color: chalk.magentaBright,
-    resolveBasePath: (name) => path.join(__dirname, '../src', 'screens', name),
+    resolveBasePath: (name) => path.join(process.cwd(), 'src', 'screens', name),
     buildFiles: buildScreenFiles,
     indexType: 'screen',
     successMessage: (name) =>
@@ -323,7 +320,7 @@ const GENERATORS = {
   hook: new ArtifactGenerator({
     label: chalk.green('🪝 Hook'),
     color: chalk.greenBright,
-    resolveBasePath: (name) => path.join(__dirname, '../src', 'hooks', name),
+    resolveBasePath: (name) => path.join(process.cwd(), 'src', 'hooks', name),
     buildFiles: buildHookFiles,
     indexType: 'hook',
     successMessage: (name) =>
@@ -334,7 +331,7 @@ const GENERATORS = {
   navigation: new ArtifactGenerator({
     label: chalk.yellow('🧭 Navigation'),
     color: chalk.yellowBright,
-    resolveBasePath: () => path.join(__dirname, '../src', 'navigation'),
+    resolveBasePath: () => path.join(process.cwd(), 'src', 'navigation'),
     buildFiles: buildNavigationFiles,
     successMessage: (name) =>
       chalk.greenBright.bold(
