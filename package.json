@@ -1,7 +1,7 @@
 {
   "name": "@moriware/rn-create-template",
   "version": "1.0.0",
-  "description": "Ferramenta CLI para gerar rapidamente componentes, telas, hooks e navegação em um projeto React Native com padrões recomendados de código, tipos, estilos e testes integrados.",
+  "description": "Ferramenta CLI da MoriWare, desenvolvida por Caio Mori, para gerar rapidamente componentes, telas, hooks e navegação em projetos React Native com padrões recomendados de código, tipos, estilos e testes integrados.",
   "main": "bin/index.js",
   "bin": {
     "rn-create-template": "bin/index.js"
@@ -35,12 +35,12 @@
     "react-functional-component",
     "stack-navigator"
   ],
-  "author": "Caio Mori <caio@moriware.dev> (https://www.moriware.dev)",
+  "author": "MoriWare <contato@moriware.dev> (https://www.moriware.dev)",
   "maintainers": [
     "Caio Mori <caio@moriware.dev> (https://www.moriware.dev)"
   ],
   "contributors": [
-    "Caio Mori <caio@moriware.dev> (https://www.moriware.dev)"
+    "Caio Mori <caio@moriware.dev> (https://www.moriware.dev) - Desenvolvedor"
   ],
   "license": "MIT",
   "bugs": {
