@@ -2,7 +2,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 
@@ -474,9 +474,23 @@ async function main() {
   }
 }
 
-const isCliExecution =
-  process.argv[1] &&
-  import.meta.url === pathToFileURL(process.argv[1]).href;
+const isCliExecution = (() => {
+  const argvPath = process.argv?.[1];
+  if (!argvPath) {
+    return false;
+  }
+
+  const currentFile = fs.realpathSync(fileURLToPath(import.meta.url));
+  let invokedFile;
+
+  try {
+    invokedFile = fs.realpathSync(argvPath);
+  } catch {
+    invokedFile = path.resolve(argvPath);
+  }
+
+  return invokedFile === currentFile;
+})();
 
 if (isCliExecution) {
   main();
