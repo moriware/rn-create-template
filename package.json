@@ -1,6 +1,6 @@
 {
   "name": "@moriware/rn-create-template",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Ferramenta CLI da MoriWare, desenvolvida por Caio Mori, para gerar rapidamente componentes, telas, hooks e navegação em projetos React Native com padrões recomendados de código, tipos, estilos e testes integrados.",
   "type": "module",
   "main": "bin/index.mjs",
@@ -8,11 +8,15 @@
     "rn-create-template": "bin/index.mjs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "USE_WATCHMAN=0 JEST_DISABLE_WATCHMAN=1 NODE_OPTIONS=--experimental-vm-modules jest --runInBand"
   },
   "dependencies": {
     "chalk": "5.6.2",
     "inquirer": "12.10.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "30.2.0",
+    "jest": "30.2.0"
   },
   "repository": {
     "type": "git",
