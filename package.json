@@ -1,6 +1,6 @@
 {
   "name": "@moriware/rn-create-template",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Ferramenta CLI da MoriWare, desenvolvida por Caio Mori, para gerar rapidamente componentes, telas, hooks e navegação em projetos React Native com padrões recomendados de código, tipos, estilos e testes integrados.",
   "type": "module",
   "main": "bin/index.mjs",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moriware/rn-create-template.git"
+    "url": "git+https://github.com/moriware/rn-create-template.git"
   },
   "keywords": [
     "react-native",
