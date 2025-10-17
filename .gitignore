@@ -16,3 +16,5 @@ Thumbs.db
 
 # Diretórios do VSCode (se usar)
 .vscode/
+
+.npmrc
