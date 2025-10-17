@@ -38,7 +38,8 @@
     "testing",
     "automation",
     "react-functional-component",
-    "stack-navigator"
+    "stack-navigator",
+    "bottom-tab-navigator"
   ],
   "author": "MoriWare <contato@moriware.dev> (https://www.moriware.dev)",
   "maintainers": [
